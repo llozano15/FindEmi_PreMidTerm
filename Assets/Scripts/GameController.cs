@@ -1,6 +1,7 @@
 using StarterAssets;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Yarn.Unity;
 
 public class GameController : MonoBehaviour
 {

@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Yarn.Unity;
 
 public class Friend_Interact : MonoBehaviour
 {
