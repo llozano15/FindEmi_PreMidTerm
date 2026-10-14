@@ -2301,6 +2301,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8047161636021232021, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1857253809}
+    - targetCorrespondingSourceObject: {fileID: 8047161636021232021, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1857253810}
   m_SourcePrefab: {fileID: 100100000, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
 --- !u!1 &1565842195 stripped
 GameObject:
@@ -2369,7 +2372,7 @@ GameObject:
   - component: {fileID: 1761186707}
   - component: {fileID: 1761186706}
   m_Layer: 0
-  m_Name: teleporter
+  m_Name: SceneTeleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2432,10 +2435,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1761186705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e779a407f90f49d448cb9f3f3fa097c9, type: 3}
+  m_Script: {fileID: 11500000, guid: df280de77db388049b949d75b18c2c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::teleporter
   destinationScene: CouchFort
+  destinationTransform: {fileID: 1815726064}
 --- !u!4 &1761186709
 Transform:
   m_ObjectHideFlags: 0
@@ -2573,8 +2577,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1815726064}
+  - component: {fileID: 1815726065}
   m_Layer: 0
-  m_Name: fortReturn
+  m_Name: PlayerSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2595,6 +2600,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1815726065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815726063}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa1f09981bd5a5b4c8ee8f1358bd35c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSpawnPoint
 --- !u!1 &1836462753
 GameObject:
   m_ObjectHideFlags: 0
@@ -2750,6 +2767,18 @@ CapsuleCollider:
   m_Height: 1.71
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1857253810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857253807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa1f09981bd5a5b4c8ee8f1358bd35c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::spawn
 --- !u!1 &1914640389
 GameObject:
   m_ObjectHideFlags: 0

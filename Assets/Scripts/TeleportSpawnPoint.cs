@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class spawn : MonoBehaviour
+public class TeleportSpawnPoint : MonoBehaviour
 {
     private CharacterController characterController;
 

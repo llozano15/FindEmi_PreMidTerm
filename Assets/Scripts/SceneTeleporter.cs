@@ -1,12 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class teleporter : MonoBehaviour
+public class SceneTeleporter : MonoBehaviour
 {
-    [Header("Destination Scene")]
+    
     [SerializeField] private string destinationScene;
-
-    [Header("Destination Position")]
     [SerializeField] private Transform destinationTransform;
 
     private bool isLoading;
@@ -64,8 +62,3 @@ public static class TeleportSpawnData
     public static Quaternion Rotation;
     public static bool HasSpawnPoint;
 }
-
-        
-
-
-
