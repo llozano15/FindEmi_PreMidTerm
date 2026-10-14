@@ -1,9 +1,16 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HouseInsideSpawn : MonoBehaviour
 {
-    void Start()
+    [SerializeField] private string destinationScene;
+
+    private void OnTriggerEnter(Collider other)
     {
-        GameController.instance.SpawnCharacter(this.transform.position, this.transform.rotation);
+        // Only teleport the player
+        if (other.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(destinationScene);
+        }
     }
 }
