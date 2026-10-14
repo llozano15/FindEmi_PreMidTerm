@@ -10,6 +10,8 @@ public class FortEnter : MonoBehaviour
         {
             GameController.instance.setSpawnPoint(fortReturn.position, fortReturn.rotation);
             SceneManager.LoadScene(1);
+
+            Debug.Log("touching collider");
         }
 
     }
