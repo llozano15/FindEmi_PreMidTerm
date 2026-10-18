@@ -760,7 +760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f141ead6f81b74286341a8b256a130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FortEnter
-  fortReturn: {fileID: 405675131}
+  fortReturn: {fileID: 8322663765251195737, guid: bf0dbc2e64a933040ad46b4066daf51d, type: 3}
 --- !u!65 &405675130
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1201,7 +1201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f141ead6f81b74286341a8b256a130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FortEnter
-  fortReturn: {fileID: 1549124005}
+  fortReturn: {fileID: 8322663765251195737, guid: bf0dbc2e64a933040ad46b4066daf51d, type: 3}
 --- !u!1 &637878469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2360,37 +2360,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1549124004
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1549124005}
-  m_Layer: 0
-  m_Name: FortReturn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1549124005
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549124004}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1784219761}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1565842195 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8667184578498139821, guid: 1dca52fe3c40edf4eb3732d76435d41b, type: 3}
@@ -2587,7 +2556,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 620746077}
-  - {fileID: 1549124005}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1836462753
