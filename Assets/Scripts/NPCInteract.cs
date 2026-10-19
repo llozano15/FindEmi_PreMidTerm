@@ -51,7 +51,7 @@ public class NPCInteract : MonoBehaviour
             {
                 Debug.Log("You Talked to the NPC!");
                 setText("");
-                camController.movePlayer();
+                //camController.movePlayer();
                 dialogue.StartDialogue(npcData.startingNode);
                 canInteract = false;
             }
@@ -63,7 +63,8 @@ public class NPCInteract : MonoBehaviour
     public void setYarnPhase()
     {
         InMemoryVariableStorage vData = GameObject.FindAnyObjectByType<InMemoryVariableStorage>();
-        vData.SetValue("$dialogPhase", npcData.currentPhase.ToString());
+        vData.SetValue("$emiDialogPhase", npcData.currentPhase.ToString());
+        vData.SetValue("$fridgeDialogPhase", npcData.currentPhase.ToString());
     }
 
     //this is the `get` of the current phase MADE in our YS dialog based on what options we've selected.

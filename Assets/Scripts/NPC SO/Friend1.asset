@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Friend1
   m_EditorClassIdentifier: Assembly-CSharp::NPC_Data
   npcName: Friend
-  startingNode: 
+  startingNode: FriendOne_Dialogue
   currentPhase: 0
