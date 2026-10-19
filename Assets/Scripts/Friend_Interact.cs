@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using Yarn.Unity;
 
 public class Friend_Interact : MonoBehaviour
@@ -9,6 +10,7 @@ public class Friend_Interact : MonoBehaviour
     public TextMeshProUGUI interactText;
     public NPCInteract npcI;
 
+    
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")

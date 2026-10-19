@@ -1,8 +1,9 @@
 ﻿title: FindFriendDialogue
 ---
 <<declare $dialogPhase = "">>
-<<declare $visitedYet = false>>
-<<dialogPhaseSetter NPC>>
+<<dialogPhaseSetter EmiNPC>>
+
+
 <<if $dialogPhase == "start">>
 <<jump Start>>
 <<elseif $dialogPhase == "quest_taken">>
@@ -17,44 +18,46 @@ Emi: I don't understand...
 ===
 title: Start
 ---
-<<set $visitedYet to true>>
-<<cam_move NPC_Cam_Rig "npc">>
-<<portrait Emi>>
+//<<cam_move NPC_Cam_Rig "npc">>
+//<<portrait Emi>>
 Emi: Hey Mokki! uhhh, question...
 Emi: I cant seem to find our other friend...
 Emi: He went into the kitchen to go get some ice cream for the both of us... but hasen't come back since.
 Emi: I'm a little worried...
 Emi: Can you help me?
-<<cam_move NPC_Cam_Rig "pc">>
-<<portrait Mokki>>
+//<<cam_move NPC_Cam_Rig "pc">>
+//<<portrait Mokki>>
     ->Of course!
-        <<dialogPhaseGetter NPC "quest_taken">>
-        <<cam_move NPC_Cam_Rig "return">>
-        <<portrait Mokki>>
+        <<dialogPhaseGetter EmiNPC "quest_taken">>
+        Emi: Thank you!!! :D
+        Emi: I'd say... check the kitchen. He might be there!
+        //<<cam_move NPC_Cam_Rig "return">>
+        //<<portrait Mokki>>
     ->Sorry, not right now.
-        <<cam_move NPC_Cam_Rig "return">>
+        //<<cam_move NPC_Cam_Rig "return">>
 ===
 title:quest_taken_return
 ---
-<<cam_move NPC_Cam_Rig "npc">>
-<<portrait Emi>>
+//<<cam_move NPC_Cam_Rig "npc">>
+//<<portrait Emi>>
 Emi: Hey, did you find him?
-    <<cam_move NPC_Cam_Rig "pc">>
-    <<portrait Mokki>>
+    //<<cam_move NPC_Cam_Rig "pc">>
+    //<<portrait Mokki>>
     ->Not yet...
-        <<cam_move NPC_Cam_Rig "return">>
+    Emi: hmm...have you checked the kitchen?
+        //<<cam_move NPC_Cam_Rig "return">>
 ===
 title:quest_complete
 ---
 <<if $visitedYet == false>>
 <<set $visitedYet to true>>
-<<portrait Emi>>
+//<<portrait Emi>>
 Emi: Hey! You found him!
-    <<cam_move NPC_Cam_Rig "pc">>
-    <<portrait Mokki>>
+    //<<cam_move NPC_Cam_Rig "pc">>
+    //<<portrait Mokki>>
     ->He was stuck inside of the fridge.
-        <<dialogPhaseGetter NPC "quest_complete_return">>
-        <<portrait Emi>>
+        <<dialogPhaseGetter EmiNPC "quest_complete_return">>
+        //<<portrait Emi>>
         Emi: Really? 
         Emi: You know what...yeah. That sound about right. 
         Emi: Thank you so much!
@@ -62,6 +65,6 @@ Emi: Hey! You found him!
 ===
 title:quest_complete_return
 ---
-<<portrait Emi>>
+//<<portrait Emi>>
 Emi: Thanks again Mokki!
 ===

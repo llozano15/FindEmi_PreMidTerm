@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EmiNPC
   m_EditorClassIdentifier: Assembly-CSharp::NPC_Data
   npcName: Emi
-  startingNode: 
+  startingNode: FindFriendDialogue
   currentPhase: 0

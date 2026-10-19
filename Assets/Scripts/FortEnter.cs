@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class FortEnter : MonoBehaviour
 {
     public Transform fortReturn;
-    public void OnEnterTrigger(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
