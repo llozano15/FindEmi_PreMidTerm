@@ -1,34 +1,76 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class friendItem : MonoBehaviour
 {
     public NPC_Data npcData;
+    public TextMeshProUGUI foundMessage;
 
+    private bool playerNearby;
     private bool collected;
+
+    private void Start()
+    {
+        if (foundMessage != null)
+        {
+            foundMessage.gameObject.SetActive(false);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Player") || collected)
-            return;
-
-        if (npcData == null)
+        if (other.CompareTag("Player"))
         {
-            Debug.LogError("NPC_Data is not assigned!");
-            return;
+            playerNearby = true;
         }
+    }
 
-        // Only allow collection after accepting the quest.
-        if (npcData.currentPhase != NPC_Data.dialogPhase.quest_taken)
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerNearby = false;
+        }
+    }
+
+    private void Update()
+    {
+        if (!playerNearby || collected)
             return;
 
-        // Update the shared phase.
-        npcData.currentPhase = NPC_Data.dialogPhase.quest_complete;
+        if (Keyboard.current != null &&
+            Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            if (npcData == null)
+            {
+                Debug.LogError("Data is not assigned");
+                return;
+            }
 
-        collected = true;
+            if (npcData.currentPhase !=
+                NPC_Data.dialogPhase.quest_taken)
+            {
+                Debug.Log("quest not accepted");
+                return;
+            }
 
-        Debug.Log("Quest item collected! Current phase: "
-            + npcData.currentPhase);
+            
+            npcData.currentPhase =
+                NPC_Data.dialogPhase.quest_complete;
 
-        
+          
+            if (foundMessage != null)
+            {
+                foundMessage.gameObject.SetActive(true);
+                foundMessage.text = "found me! >;3";
+            }
+
+            collected = true;
+
+            Debug.Log("found me! >:3");
+
+            gameObject.SetActive(false);
+        }
     }
 }
