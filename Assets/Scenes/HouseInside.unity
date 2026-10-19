@@ -2049,6 +2049,7 @@ GameObject:
   - component: {fileID: 1344760910}
   - component: {fileID: 1344760909}
   - component: {fileID: 1344760908}
+  - component: {fileID: 1344760915}
   - component: {fileID: 1344760912}
   - component: {fileID: 1344760914}
   - component: {fileID: 1344760913}
@@ -2159,7 +2160,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344760907}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 723d8eb2775e7b74aab1e96d5c988683, type: 3}
   m_Name: 
@@ -2195,7 +2196,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344760907}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95b9c41e933c2d24a8e066cfc5d97dce, type: 3}
   m_Name: 
@@ -2206,6 +2207,19 @@ MonoBehaviour:
   dialogue: {fileID: 734828571}
   camController: {fileID: 0}
   npcData: {fileID: 11400000, guid: 4a3b12c686fb58e4fa66f7a11032165c, type: 2}
+--- !u!114 &1344760915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344760907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af46e775a025f3428444bf77eb3a641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::friendItem
+  npcData: {fileID: 11400000, guid: e70c8e2847644154eaf232b4ada64fcc, type: 2}
 --- !u!1 &1365582107
 GameObject:
   m_ObjectHideFlags: 0

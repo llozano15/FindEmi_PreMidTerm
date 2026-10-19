@@ -79,6 +79,7 @@ public class NPCInteract : MonoBehaviour
         {
             npcData.currentPhase = NPC_Data.dialogPhase.quest_complete_return;
         }
+       
     }
 
     public void OnApplicationQuit()

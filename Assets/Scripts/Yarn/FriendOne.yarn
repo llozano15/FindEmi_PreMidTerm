@@ -5,12 +5,13 @@
 
 
 <<if $fridgeDialogPhase == "start">>
-<<jump Quest_completed_dialog>>
+<<jump quest_complete_dialog>>
 <<endif>>
 ===
 
-title: Quest_completed_dialog
+title: quest_complete_dialog
 ---
+<<dialogPhaseGetter Fridge "quest_complete">>
 Friend: Hey you found me!
 Mokki: Hey! bla blal
 ===
